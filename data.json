@@ -1,0 +1,14 @@
+[
+    {
+        "itemId":"12341822",
+        "itemName":"desk",
+        "price":700000,
+        "ratings":[
+            {"rater":"akmal", "score":4},
+            {"rater":"andi", "score":5}],
+        "freeShipping":true,
+        "color":[
+            "brown",
+            "black"]
+    }
+]

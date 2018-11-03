@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>GB Arkademy Test No. 1</title>
+    </head>
+    <body>
+        <div id="result"></div>
+    
+    <script language="javascript">
+        var text = '{' + 
+        '"itemId":"12341822",' + 
+        '"itemName":"desk",' + 
+        '"price":700000,' +
+        '"ratings":[' +
+            '{"rater":"akmal", "score":4},' + 
+            '{"rater":"andi", "score":5}],' +
+        '"freeShipping":true,' + 
+        '"color":[' + 
+            '"brown", "black"]' +
+    '}';
+        //obj harus make kutip
+                
+        var obj = JSON.parse(text);
+                
+        var hasil = 
+            "<b>Item ID : </b>" + obj.itemId + "<br>" +
+            "<b>Item Name : </b>" +obj.itemName + "<br>" +
+            "<b>Price : </b>" +obj.price + "<br><b>Ratings :</b><br>";
+
+        for(i in obj.ratings) {
+            hasil += "<b>Raters : </b>" + obj.ratings[i].rater + ", Score" + obj.ratings[i].score + "<br>";
+        }
+
+        hasil += "<b>Free Shipping : </b>" + obj.freeShipping + "<br><b>Colors : </b><br>"
+
+        for(i in obj.color) {
+            hasil += obj.color[i] + "<br>";
+        }
+
+        document.getElementById("result").innerHTML = hasil;
+     </script>
+        
+    </body>
+</html>
